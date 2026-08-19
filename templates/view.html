@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Details</title>
+</head>
+
+<body>
+
+    <h1>Weather Details</h1>
+
+    <a href="/history">← Back to History</a>
+
+    <hr>
+
+    {% if search %}
+
+        <h2>{{ search.location_name }}</h2>
+
+        <p>
+            Original Search:
+            {{ search.location_input }}
+        </p>
+
+        <p>
+            Country/Location:
+            {{ search.location_name }}
+        </p>
+
+        <p>
+            Latitude:
+            {{ search.latitude }}
+        </p>
+
+        <p>
+            Longitude:
+            {{ search.longitude }}
+        </p>
+
+        <h3>Temperature</h3>
+
+        <p>
+            Average:
+            {{ search.average_temperature }} °F
+        </p>
+
+        <p>
+            Minimum:
+            {{ search.minimum_temperature }} °F
+        </p>
+
+        <p>
+            Maximum:
+            {{ search.maximum_temperature }} °F
+        </p>
+
+        <p>
+            Created:
+            {{ search.created_at.strftime("%Y-%m-%d %H:%M") }}
+        </p>
+
+        <p>
+            Last Updated:
+            {{ search.updated_at.strftime("%Y-%m-%d %H:%M") }}
+        </p>
+
+    {% else %}
+
+        <p>Weather record not found.</p>
+
+    {% endif %}
+
+</body>
+
+</html>
