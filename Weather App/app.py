@@ -13,9 +13,11 @@ db.init_app(app)
 
 from models.weather import WeatherSearch
 from routes.weather_routes import weather_bp
+from routes.export_routes import export_bp
 
 
 app.register_blueprint(weather_bp)
+app.register_blueprint(export_bp)
 
 
 with app.app_context():
