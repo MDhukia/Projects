@@ -1,47 +1,52 @@
-
 # 🌤️ Weather App
 
-A beginner-friendly full-stack weather application built with **Python, Flask, SQLite, HTML, CSS, and REST APIs**.
+A full-stack weather web application built with **Python, Flask, SQLite, HTML, CSS, and REST APIs**.
 
-The application allows users to search for weather using a **city, ZIP/postal code, or other location input**, select a date range, view weather information, save searches to a SQLite database, and perform CRUD operations on saved weather records.
+This application allows users to:
+
+- Search for weather using a city, ZIP/postal code, or other location input
+- Select a start date and end date
+- Retrieve current weather information
+- View daily minimum and maximum temperatures
+- Calculate average, minimum, and maximum temperatures
+- Save weather searches to a SQLite database
+- View weather search history
+- View individual weather records
+- Edit/update saved records
+- Delete saved records
+- Export weather history as CSV
+- Export weather history as PDF
+- Display weather information using a styled web interface
+
+The project demonstrates **REST API integration, database persistence, CRUD operations, form validation, data processing, and Flask web application development**.
 
 ---
 
 ## 📌 Project Overview
 
-The Weather App was developed to practice and demonstrate:
+The Weather App connects a Flask web application with the **Open-Meteo Geocoding API** and **Open-Meteo Weather API**.
 
-- Flask web application development
-- REST API integration
-- Location/geocoding validation
-- Weather data retrieval
-- SQLite database management
-- CRUD functionality
-- HTML templates with Jinja2
-- Form validation
-- CSV export
-- PDF export
-- Responsive and organized web page styling
-
-The application uses the **Open-Meteo API** for location geocoding and weather information.
-
----
-
-## ✨ Features
-
-### 🌎 Location Search
-
-Users can enter different types of location information, including:
-
-- City names
-- ZIP/postal codes
-- Location names supported by the geocoding API
-
-Examples:
+The application follows this workflow:
 
 ```text
-Sunnyvale
-San Francisco
-Fremont
-94086
-Santa Clara
+User enters location
+        ↓
+Location Validation
+        ↓
+Open-Meteo Geocoding API
+        ↓
+Latitude + Longitude
+        ↓
+Open-Meteo Weather API
+        ↓
+Current + Daily Weather
+        ↓
+Display Weather Results
+        ↓
+Save Search to SQLite Database
+        ↓
+Weather History
+        ↓
+View / Edit / Delete
+        ↓
+Export CSV / PDF
