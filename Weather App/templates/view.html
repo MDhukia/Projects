@@ -2,10 +2,18 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Weather Details</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
 </head>
 
 <body>
@@ -18,58 +26,68 @@
 
     {% if search %}
 
-        <h2>{{ search.location_name }}</h2>
+        <div class="weather-card">
 
-        <p>
-            Original Search:
-            {{ search.location_input }}
-        </p>
+            <h2>{{ search.location_name }}</h2>
 
-        <p>
-            Country/Location:
-            {{ search.location_name }}
-        </p>
+            <p>
+                <strong>Original Search:</strong>
+                {{ search.location_input }}
+            </p>
 
-        <p>
-            Latitude:
-            {{ search.latitude }}
-        </p>
+            <p>
+                <strong>Country/Location:</strong>
+                {{ search.location_name }}
+            </p>
 
-        <p>
-            Longitude:
-            {{ search.longitude }}
-        </p>
+            <p>
+                <strong>Latitude:</strong>
+                {{ search.latitude }}
+            </p>
 
-        <h3>Temperature</h3>
+            <p>
+                <strong>Longitude:</strong>
+                {{ search.longitude }}
+            </p>
 
-        <p>
-            Average:
-            {{ search.average_temperature }} °F
-        </p>
+            <hr>
 
-        <p>
-            Minimum:
-            {{ search.minimum_temperature }} °F
-        </p>
+            <h3>Temperature</h3>
 
-        <p>
-            Maximum:
-            {{ search.maximum_temperature }} °F
-        </p>
+            <p>
+                <strong>Average:</strong>
+                {{ search.average_temperature }} °F
+            </p>
 
-        <p>
-            Created:
-            {{ search.created_at.strftime("%Y-%m-%d %H:%M") }}
-        </p>
+            <p>
+                <strong>Minimum:</strong>
+                {{ search.minimum_temperature }} °F
+            </p>
 
-        <p>
-            Last Updated:
-            {{ search.updated_at.strftime("%Y-%m-%d %H:%M") }}
-        </p>
+            <p>
+                <strong>Maximum:</strong>
+                {{ search.maximum_temperature }} °F
+            </p>
+
+            <hr>
+
+            <p>
+                <strong>Created:</strong>
+                {{ search.created_at.strftime("%Y-%m-%d %H:%M") }}
+            </p>
+
+            <p>
+                <strong>Last Updated:</strong>
+                {{ search.updated_at.strftime("%Y-%m-%d %H:%M") }}
+            </p>
+
+        </div>
 
     {% else %}
 
-        <p>Weather record not found.</p>
+        <div class="error">
+            Weather record not found.
+        </div>
 
     {% endif %}
 

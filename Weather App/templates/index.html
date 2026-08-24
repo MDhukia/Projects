@@ -9,6 +9,11 @@
 
     <title>Weather App</title>
 
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
 </head>
 
 <body>
@@ -59,20 +64,18 @@
 
     {% if error %}
 
-        <hr>
-
-        <p>
-            <strong>{{ error }}</strong>
-        </p>
+        <div class="error">
+            {{ error }}
+        </div>
 
     {% endif %}
 
 
     {% if location and weather %}
 
-        <hr>
+        <div class="weather-card">
 
-        <h2>{{ location.name }}</h2>
+            <h2>{{ location.name }}</h2>
 
         <p>
             <strong>Country:</strong>
@@ -184,6 +187,7 @@
             </tbody>
 
         </table>
+        </div>
 
     {% endif %}
 

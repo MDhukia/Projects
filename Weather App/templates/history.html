@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Weather History</title>
+    
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
 </head>
 
 <body>
@@ -16,17 +22,21 @@
 
 <br><br>
 
-<a href="/export/csv">
-    <button type="button">
-        Export CSV
-    </button>
-</a>
+<div class="export-buttons">
 
-<a href="/export/pdf">
-    <button type="button">
-        Export PDF
-    </button>
-</a>
+    <a href="/export/csv">
+        <button type="button">
+            Export CSV
+        </button>
+    </a>
+
+    <a href="/export/pdf">
+        <button type="button">
+            Export PDF
+        </button>
+    </a>
+
+</div>
 
     <hr>
 
@@ -74,16 +84,16 @@
                         <td>
 
                             <a href="/view/{{ search.id }}">
-                                View
+                                <button type="button">View</button>
                             </a>
 
-                            |
+                        
 
                             <a href="/edit/{{ search.id }}">
-                                Edit
+                                <button type="button">Edit</button>
                             </a>
 
-                            |
+                            
 
                             <form
                                 action="/delete/{{ search.id }}"
