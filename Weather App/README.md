@@ -51,11 +51,7 @@ View / Edit / Delete
         ↓
 Export CSV / PDF
 
----
 
 
-## 🎥 Project Demo
-
-Watch the Weather App Demo
 
 
