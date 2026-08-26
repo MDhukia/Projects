@@ -52,6 +52,7 @@ View / Edit / Delete
 Export CSV / PDF
 
 
+## 🎥 Project Demo
 
-
+▶️ **[Watch the Weather App Demo](https://youtu.be/ABC123xyz)**
 
