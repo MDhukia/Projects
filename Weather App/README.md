@@ -50,3 +50,7 @@ Weather History
 View / Edit / Delete
         ↓
 Export CSV / PDF
+
+## 🎥 Project Demo
+
+▶️ **[Watch the Weather App Demo](https://youtu.be/M4z4SH8_Jxk)**
