@@ -103,6 +103,8 @@ Save and manage weather records.
 ▶️ **[Watch the Weather App Demo](https://youtu.be/M4z4SH8_Jxk)**
 
  Developed by: Monika Dhukia
+
  Project: PM Accelerator – Tech Assessment 
+
  Application Type: Full-Stack Backend / CRUD Weather Application
 
