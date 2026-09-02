@@ -53,7 +53,7 @@ Export CSV / PDF
 ```
 
 
-##⚙️ Installation
+## ⚙️ Installation
 1. Clone the Repository
 git clone https://github.com/MDhukia/Projects.git
 2. Navigate to the Weather App
@@ -102,7 +102,7 @@ Save and manage weather records.
 
 ▶️ **[Watch the Weather App Demo](https://youtu.be/M4z4SH8_Jxk)**
 
-## Developed by: Monika Dhukia
-## Project: PM Accelerator – Tech Assessment 
-## Application Type: Full-Stack Backend / CRUD Weather Application
+# Developed by: Monika Dhukia
+# Project: PM Accelerator – Tech Assessment 
+# Application Type: Full-Stack Backend / CRUD Weather Application
 
